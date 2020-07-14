@@ -1,6 +1,6 @@
-package lesson_1_acquaintance;
+package Lesson01_Acquaintance;
 
-public class Lesson_1_Introduction {
+public class Lesson01_Introduction {
     public static void main(String[] args) {
         for(int i = 0; i < 5; i++) {
             System.out.print("Привет! меня зовут Кирилл. ");
@@ -12,3 +12,6 @@ public class Lesson_1_Introduction {
         }
     }
 }
+// сделать в 1 стиле пакеты с уроками
+// разметка маркдоум(абзац в редми)
+//
