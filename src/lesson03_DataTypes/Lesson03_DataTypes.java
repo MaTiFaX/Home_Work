@@ -79,7 +79,6 @@ public class Lesson03_DataTypes {
                123 / 16 = 7 (11)
                7 / 16 = 0 (7)
                >> 11 = B; 123 = b7
-
              */
         System.out.println("123 = 0b1111011");
         System.out.println("123 = 173");
@@ -88,7 +87,16 @@ public class Lesson03_DataTypes {
         System.out.println("-------------------------------");
 
         System.out.println("Progam Task 9");
-
+        String s;           // s ссылка на строку (stack).
+        s = "hello world";  //"hello world" - объект (heap)
+        int xx = 22;        // в примитивных только стек
+        Integer xx1 = 33;
+        /* Wrapper  Boolean – 128 bits
+         Byte – 128 bits
+         Short, Character – 128 bits
+         Integer, Float – 128 bits
+         Long, Double – 192 bits
+         */
 
         System.out.println("-------------------------------");
     }
