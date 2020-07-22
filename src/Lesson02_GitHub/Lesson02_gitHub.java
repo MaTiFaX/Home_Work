@@ -1,6 +1,6 @@
 package Lesson02_GitHub;
 
-public class Lesson02_GitHub {
+public class Lesson02_gitHub {
     public static void main(String[] args) {
 
         System.out.println("Progam Task 1");

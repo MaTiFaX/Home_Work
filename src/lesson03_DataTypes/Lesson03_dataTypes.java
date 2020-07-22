@@ -1,6 +1,6 @@
 package lesson03_DataTypes;
 
-public class Lesson03_DataTypes {
+public class Lesson03_dataTypes {
     public static void main(String[] args) {
         System.out.println("Progam Task 1");
         byte q = 127; // хранит от -128 до 127 и занимает 1 байт
