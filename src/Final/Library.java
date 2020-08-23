@@ -3,6 +3,7 @@ package Final;
 import java.util.Arrays;
 import java.util.Scanner;
 
+
 /**
  * Финальное техническое задание:
  * Необходимо реализовать базу знаний книг (не обязательно книг).
@@ -23,7 +24,8 @@ import java.util.Scanner;
  * - Программа должна быть на английском.
  * - Программа должна быть понятной для человека, который видит ее впервые .
  * - Программа должна быть отказоустойчивой.
- */
+ **/
+
 class Library {
     public static String[] books = new String[10];
 
@@ -36,6 +38,7 @@ class Library {
 
         for (int i = 0; i < books.length; i++) {
             if (books[i] == null) {
+                books[i] = name;
                 break;
             } else {
                 System.out.println(books[i]);
@@ -44,7 +47,6 @@ class Library {
     }
 
     public static void main(String[] args) {
-        label:
         while (true) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Menu: \n" +
@@ -56,15 +58,14 @@ class Library {
                     "6. Sorting book \n" +
                     "7. Exit");
 
-            int command = scanner.nextInt();
+            String command = scanner.nextLine();
 
             switch (command) {
-                case 1:
+                case "1":
                     add();
                     break;
 
-
-                case 2:
+                case "2":
                     System.out.println("which book to delete? ");
                     String delete = scanner.nextLine();
                     Arrays.sort(books);
@@ -78,28 +79,28 @@ class Library {
                     }
                     break;
 
-                case 3:
+                case "3":
                     System.out.println("Edit name of book");
                     String toReplaceTheBook = scanner.nextLine();
                     System.out.println("What to change? ");
                     String editBook = scanner.nextLine();
                     for (int i = 0; i < books.length; i++) {
-                        if (books[i].contains(toReplaceTheBook)) {
-                            books[i] = editBook;
-                            editBook = toReplaceTheBook;
-                            System.out.println(Arrays.toString(books));
-                        }
+                            if (books[i].contains(toReplaceTheBook)) {
+                                books[i] = editBook;
+                                editBook = toReplaceTheBook;
+                                System.out.println(Arrays.toString(books));
+                            }
                     }
                     break;
 
-                case 4:
+                case "4":
                     System.out.println("All Books: ");
                     for (String b : books) {
                         System.out.println(b);
                     }
                     break;
 
-                case 5:
+                case "5":
                     System.out.println("what book can I find?");
                     String findBook = scanner.nextLine();
                     String database = "This book is not in the database";
@@ -112,16 +113,16 @@ class Library {
                     System.out.println(database);
                     break;
 
-                case 6:
+                case "6":
                     System.out.println("Sort");
                     Arrays.sort(books);
                     break;
 
-                case 7:
+                case "7":
                     System.out.println("log out of the database");
                     return;
                 default:
-                    break label;
+                    break;
             }
         }
     }
